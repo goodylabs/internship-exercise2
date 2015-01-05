@@ -1,25 +1,46 @@
-## Laravel PHP Framework
+[logo]: http://www.goodylabs.com/assets/logo-c011d0a0fa8c64e1d6c284405fc2155d.png
+[this_repo]: https://github.com/goodylabs/internship-exercise2
+[github_join_page]: https://github.com/join
+[github_first_excercise]: https://github.com/goodylabs/internship-exercise1/
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+![goodylabs][logo]
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+goodylabs internship exercise 2
+===============================
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+Purpose of this document
+------------------------
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+This excercise is to verify that you can:
 
-## Official Documentation
+1. create a simple web application
+2. understand and work with MVC paradigm
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+List of tasks:
+--------------
 
-### Contributing To Laravel
+1. If you do not have a GitHub account yet, please go to [GitHub join page][github_join_page] and register. You will get a free account, no worries - no credit card is required. If you are lost, an initial information is also in the [First Internship Excercise][github_first_excercise].
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+2. Fork [this][this_repo] repository using any git client.
 
-### License
+3. Pick your favourite web framework (it can be PHP, Django, Python, Java with JSP, Ruby on Rails, express with node.js or any other framework).
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+4. Create a simple form that will calculate an average car fuel consumption. It can calculate miles per gallon OR liters per every 100 kilometers - it is up to you - only one version will be verified. Please apply the rules of **Model-View-Controller** paradigm in your solution. 
+
+ |Inputs (European version)|Output|
+ |:-----|:-----|
+ |fuel (in liters)|an average fuel consumption (for example 6.8 l / 100 km)|
+ |journey driven (in kilometers)| |
+ 
+ |Inputs (US version)|Output|
+ |:-----|:-----|
+ |fuel (in gallons)|an average fuel consumption (for example 35 miles per gallon)|
+ |journey driven (in miles)| |
+
+5. Commit your changes with meaningful commit messages.
+
+6. Push your changes from your local computer to your GitHub repository.
+
+7. Send a pull request to goodylabs/internship-excercise2. This point is not mandatory, however it might speed up the verification process :)
+
+You're done ;)
