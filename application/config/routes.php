@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "welcome";
+$route['default_controller'] = "fuel_consumption_calculator";
 $route['404_override'] = '';
 
 
