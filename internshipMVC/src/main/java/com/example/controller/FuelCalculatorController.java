@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Locale;
 
+import static java.lang.Math.round;
+
 /**
  * Created by bartek on 09.02.15.
  * Controller for view: fuelCalculator.html
@@ -63,7 +65,7 @@ public class FuelCalculatorController {
      */
     private double calcEU(int fuel, int distance){
         if(distance == 0) return 0.0;
-        return ((double)fuel/distance)*100;
+        return (double)Math.round((((double)fuel/distance)*100) * 100) / 100;
     }
 
     /**
@@ -74,6 +76,6 @@ public class FuelCalculatorController {
      */
     private double calcUS(int fuel, int distance){
         if(fuel == 0) return 0.0;
-        return ((double)distance/fuel);
+        return (double)Math.round((((double)distance/fuel)) * 100) / 100;
     }
 }
