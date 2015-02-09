@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8">
+    </meta>
+    <title></title>
+</head>
+<body>
+<a href="?lang=en_US">US</a>|<a href="?lang=eu">EU</a>
+
+<p th:text="#{title}"></p>
+
+<form id="calculate-form" role="form" th:action="@{/calc}" method="post" th:object="${model}">
+    <div>
+        <label for="fuelField" th:text="#{label.fuel}"></label>
+        <input type="number" min="0" id="fuelField" name="fuelField" th:field="${model.fuel}"/>
+        <label for="fuelField" th:text="#{textView.fuel}"></label>
+    </div>
+    <div>
+        <label for="distanceField" th:text="#{label.journeyDriven}"></label>
+        <input type="number" min="0" id="distanceField" name="distanceField" th:field="${model.distance}"/>
+        <label for="distanceField" th:text="#{textView.distance}"></label>
+    </div>
+    <div>
+        <button type="submit" th:text="#{button.calculate}"></button>
+    </div>
+</form>
+<div>
+    <label for="result" th:text="#{label.result}"></label>
+    <input disabled="true" id="result" th:field="${model.result}"/>
+    <label for="result" th:text="#{testView.result}"></label>
+</div>
+</body>
+</html>
