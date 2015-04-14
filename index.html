@@ -1,0 +1,114 @@
+﻿<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Luiz Henrique Alves Ferreira">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>GoodyLabs Internship</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Luiz Henrique Alves Ferreira</a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h2>GoodyLabs Internship Exercise 2</h2>
+            <div class="row">
+                <div class="col-md-4"
+                     ng-app="fuelefficiency"
+                     ng-controller="myCtrl"
+                     ng-init="fuelefficiency={journeyLenth:1,litersConsumed:1}">
+                    <div class="form-group">
+                        Journey Lenth (kilometers): <input type="number" class="form-control" ng-model="journeyLenth"><br>
+                        Liters Consumed: <input type="number" class="form-control" ng-model="litersConsumed"><br>
+                        <br>
+                        Fuel Efficiency: {{efficiency()}} L/ 100km
+                    </div>
+
+
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        I decided not to separete the layers in different files (1 file for view 1 for model and 1 for the controll)
+                        because this solution was too short and wil not escalate, but the MVC paradigm was applied. Using the framework AngularJS the concept 
+                        in this code is clear (the controller handle the event of data, does the math and return the data (model) to the view).
+                    </p> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <h2>GoodyLabs Internship Exercise 3</h2>
+        <div class="col-md-6">
+            
+            <img class="row"  src="images/ean-13_7798043560836.png" />
+            <div class="row">
+                <ul>
+                    <li> <h4>BarCode: <a style="color:blue">779</a><a style="color:green">8043</a> <a style="color:red">56083</a><a style="color:grey" >6</a></h4></li>
+                    <li> <h4>Country Code: <a style="color:blue">779</a> Argentina </h4></li>
+                    <li> <h4>Manufacturer Code: <a style="color:green">8043</a> Celulosa Argentina</h4></li>
+                    <li> <h4>Product Code: <a style="color:red">56083</a> PAPEL BOREAL A4 75GR C/500 FLS</h4></li>
+                    <li> <h4> Checksum Digit: <a style="color:grey">6</a>  </h4></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="col-md-4">
+            <h3>Item Record</h3>
+            <ul>
+                <li>Description		A4 Ream of paper</li>
+                <li>Size/Weight		500</li>
+                <li>Issuing Country		Argentina</li>
+                <li>Last Modified		7 Apr 2014, 9:05 AM</li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+    <script>
+        var app = angular.module('fuelefficiency', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.journeyLenth = 1;
+            $scope.litersConsumed = 1;
+            $scope.efficiency = function () {
+                return (100 * $scope.litersConsumed) / $scope.journeyLenth;
+            }
+        });
+    </script>
+</body>
+</html>
