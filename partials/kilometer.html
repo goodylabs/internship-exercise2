@@ -1,0 +1,26 @@
+<p><a class="btn btn-default" ui-sref="home" role="button">Back</a></p>
+<h1>Liter / Kilometer</h1>
+<form name="kilometerForm" ng-controller="KilometerController" ng-submit="calculate()">
+  <div class="row">
+    <div class="col-sm-6">
+      <fieldset class="form-group">
+        <label>Fuel in Liters</label>
+        <input ng-model="fuel" type="number" class="form-control" placeholder ="Fuel in Liters" title="Fuel in Liters" min="1" required/>
+      </fieldset>
+    </div>
+    <div class="col-sm-6">
+      <fieldset class="form-group">
+        <label>Distance in Kilometers</label>
+        <input ng-model="distance" type="number" class="form-control" placeholder="Distance in Kilometers" title="Distance in Kilometers" min="1" required />        
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+    </div>        
+  </div>
+  <fieldset class="form-group">
+    <input type="submit" class="btn btn-primary" value="Calculate" />
+  </fieldset>
+  <h3 ng-show="resultFuel">
+      {{resultFuel | number : 1}} liter(s) per 100 kilometers
+  </h3>
+</form>
